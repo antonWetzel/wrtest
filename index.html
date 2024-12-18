@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+</body>
+
+<script type="module">
+    import init, { initThreadPool, sum } from "./pkg/wrtest.js";
+    console.log("try init wasm");
+    await init();
+    console.log("try init threadpool");
+    await initThreadPool(navigator.hardwareConcurrency);
+    console.log("success");
+
+    console.log(sum([0, 1, 2, 3]));
+</script>
+
+</html>
